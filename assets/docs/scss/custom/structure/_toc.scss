@@ -17,23 +17,9 @@
 }
 
 .docs-toc-mobile {
-    position: sticky;
-    // top: 71px; // important (must be set)
-    top: 85px; // important (must be set)
     padding-left: calc(var(--bs-gutter-x) * 1.05);
     padding-right: calc(var(--bs-gutter-x) * 1.05);
     z-index: 20;
-
-    // &.toc-pinned {
-    //     padding: 0;
-
-    //     .dropdown-toggle {
-    //         border-left: 0;
-    //         border-right: 0;
-    //         border-top: 0;
-    //         border-radius: 0;
-    //     }
-    // }
 
     a {
         color: var(--text-default);
@@ -72,10 +58,25 @@
             }
         }
     }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0px;
+        padding-bottom: 4px;
+        margin: 0px;
+        font-size: 1rem;
+
+        li {
+            text-decoration: underline;
+        }
+    }
+
+    nav {
+        padding-bottom: 1rem;
+    }
 }
 
 .docs-toc {
-    position: -webkit-sticky;
     position: sticky;
     top: 6rem;
     height: calc(100vh - 11.1rem);
