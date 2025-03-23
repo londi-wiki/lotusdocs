@@ -40,6 +40,12 @@ defaultContentLanguage = 'en'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true # https://jdhao.github.io/2019/12/29/hugo_html_not_shown/
+    [markup.goldmark.extensions]
+        [markup.goldmark.extensions.passthrough]
+            enable = true
+                [markup.goldmark.extensions.passthrough.delimiters]
+                    block = [['\[', '\]'], ['$$', '$$']]
+                    inline = [['\(', '\)'], ['$', '$']]
   # [markup.highlight]
   #   codeFences = false # disables Hugo's default syntax highlighting
   # [markup.goldmark.parser]
@@ -48,7 +54,7 @@ defaultContentLanguage = 'en'
   #     title = true
 
 [params]
-
+  math = true
   google_fonts = [
     ["Inter", "300, 400, 600, 700"],
     ["Fira Code", "500, 700"]
